@@ -1,0 +1,8 @@
+FROM java:8-jre 
+
+WORKDIR /app 
+
+EXPOSE 8080 
+
+ADD http://52.213.161.25:8080/job/Pull%20Request%20Merger/lastSuccessfulBuild/artifact/target/scala-2.11/hello-scala-assembly-1.1.jar /app/hello-scala-assembly-1.1.jar
+ENTRYPOINT java -jar /app/hello-scala-assembly-1.1.jar
